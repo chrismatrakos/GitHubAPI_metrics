@@ -10,7 +10,7 @@ namespace Application
     {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, world!");
+        Console.WriteLine("Enter access token key!");
         Console.ReadLine();
     }
     }
