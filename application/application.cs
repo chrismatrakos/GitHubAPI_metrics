@@ -12,15 +12,19 @@ namespace Application {
             Console.WriteLine("User entered " + input);
             Console.ReadLine();
             Console.WriteLine("Making API Call...");
-            using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
-            {
-                client.BaseAddress = new Uri("https://api.stackexchange.com/2.2/");
-                HttpResponseMessage response = client.GetAsync("answers?order=desc&sort=activity&site=stackoverflow").Result;
-                response.EnsureSuccessStatusCode();
-                string result = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine("Result: " + result);
-            }
-            Console.ReadLine();
+            
+        }
+        
+        public static async Task ExecuteAsync() {
+            HttpClient client = new HttpClient();
+            client.BaseAddress = new Uri("https://api.github.com");
+            var token = "<token>";
+
+            client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "1.0"));
+            client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
+
+            var response = await client.GetAsync("/user");
         }
     }
 }
