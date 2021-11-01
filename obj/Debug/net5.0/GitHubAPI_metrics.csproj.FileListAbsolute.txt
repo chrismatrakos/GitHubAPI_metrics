@@ -1,0 +1,16 @@
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.csproj.AssemblyReference.cache
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.GeneratedMSBuildEditorConfig.editorconfig
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.AssemblyInfoInputs.cache
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.AssemblyInfo.cs
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.csproj.CoreCompileInputs.cache
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics.deps.json
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics.runtimeconfig.json
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics.runtimeconfig.dev.json
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics.dll
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/ref/GitHubAPI_metrics.dll
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/bin/Debug/net5.0/GitHubAPI_metrics.pdb
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.dll
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/ref/GitHubAPI_metrics.dll
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.pdb
+/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/Debug/net5.0/GitHubAPI_metrics.genruntimeconfig.cache
