@@ -19,16 +19,25 @@ namespace GitHubAPI_metrics {
 	    public static async Task ExecuteAsync(string token) {
 		    HttpClient client = new HttpClient();
 		    client.BaseAddress = new Uri("https://api.github.com");
-		    client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "1.0"));
+		    client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "2.0"));
 		    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 		    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
 		    var response = await client.GetAsync("/rate_limit");
 		    Console.WriteLine("====================================================");
-		    Console.WriteLine(response);
+            Console.WriteLine(response);
+            // response.EnsureSuccessStatusCode();
+    
+            string data = await response.Content.ReadAsStringAsync();
+            Console.WriteLine(JsonSerializer.Deserialize<User>(data));
+            User user = JsonSerializer.Deserialize<User>(data);
+            Console.WriteLine(user.Limit);
+		    
 	    }
     }
 
     class User {
-        
+        public string Limit { get; set; }
+        public string Used { get; set;}
+
     }
 }
