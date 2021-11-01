@@ -21,10 +21,12 @@ namespace GitHubAPI_metrics {
 		    client.BaseAddress = new Uri("https://api.github.com");
 		    client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "2.0"));
 		    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-		    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
+		    // client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
 		    var response = await client.GetAsync("/rate_limit");
 		    Console.WriteLine("====================================================");
             Console.WriteLine(response);
+            var result  = response.Content.ReadAsStringAsync().Result;
+            Console.WriteLine(result);
             // response.EnsureSuccessStatusCode();
     
             // string data = await response.Content.ReadAsStringAsync();
