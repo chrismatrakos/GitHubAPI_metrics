@@ -30,12 +30,19 @@ namespace GitHubAPI_metrics {
             if (response.IsSuccessStatusCode) {
                 var result  = response.Content.ReadAsStringAsync().Result;
                 Console.WriteLine(result);
-                dynamic obj = JsonConvert.DeserializeObject<dynamic>(result);
-				Console.WriteLine("limit: " + obj.rate.limit);
-                Console.WriteLine("remaining: " + obj.rate.remaining);
-				Console.WriteLine("used: " + obj.rate.used);
-
+                // dynamic obj = JsonConvert.DeserializeObject<dynamic>(result);
+				// Console.WriteLine("limit: " + obj.rate.limit);
+                // Console.WriteLine("remaining: " + obj.rate.remaining);
+				// Console.WriteLine("used: " + obj.rate.used);
+                // WORKING THE ABOVE......... 
+                
+                Rate obj = JsonConvert.DeserializeObject<Rate>(result);
+                Console.WriteLine(obj);
+				Console.WriteLine("limit: " + obj.limit);
+                Console.WriteLine("remaining: " + obj.remaining);
+				Console.WriteLine("used: " + obj.used);
                 // var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
+                // Console.WriteLine(s);
                 Console.WriteLine("SUCCESS");
             }
             else {
@@ -53,11 +60,11 @@ namespace GitHubAPI_metrics {
     }
 
     class Rate {
-        public int Limit { get; set; }
-        public int Used { get; set;}
-        public int Remaining { get; set; }
-        public string Reset { get; set; }
-        public string Core { get; set; }
+        public int limit { get; set; }
+        public int used { get; set;}
+        public int remaining { get; set; }
+        public string reset { get; set; }
+        public string core { get; set; }
 
     }
 }
