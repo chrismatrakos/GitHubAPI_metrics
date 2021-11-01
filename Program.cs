@@ -25,8 +25,17 @@ namespace GitHubAPI_metrics {
 		    var response = await client.GetAsync("/rate_limit");
 		    Console.WriteLine("====================================================");
             Console.WriteLine(response);
-            var result  = response.Content.ReadAsStringAsync().Result;
-            Console.WriteLine(result);
+            
+            if (response.IsSuccessStatusCode) {
+                var result  = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine(result);
+                // var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
+                Console.WriteLine("SUCCESS");
+            }
+            else {
+                Console.WriteLine("FAILED");
+                // return "Fail";
+            }
             // response.EnsureSuccessStatusCode();
     
             // string data = await response.Content.ReadAsStringAsync();
