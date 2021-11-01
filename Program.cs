@@ -52,9 +52,12 @@ namespace GitHubAPI_metrics {
 	    }
     }
 
-    class User {
-        public string Limit { get; set; }
-        public string Used { get; set;}
+    class Rate {
+        public int Limit { get; set; }
+        public int Used { get; set;}
+        public int Remaining { get; set; }
+        public string Reset { get; set; }
+        public string Core { get; set; }
 
     }
 }
