@@ -27,10 +27,10 @@ namespace GitHubAPI_metrics {
             Console.WriteLine(response);
             // response.EnsureSuccessStatusCode();
     
-            string data = await response.Content.ReadAsStringAsync();
-            Console.WriteLine(JsonSerializer.Deserialize<User>(data));
-            User user = JsonSerializer.Deserialize<User>(data);
-            Console.WriteLine(user.Limit);
+            // string data = await response.Content.ReadAsStringAsync();
+            // Console.WriteLine(JsonSerializer.Deserialize<User>(data));
+            // User user = JsonSerializer.Deserialize<User>(data);
+            // Console.WriteLine(user.Limit);
 		    
 	    }
     }
