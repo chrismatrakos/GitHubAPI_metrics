@@ -9,6 +9,7 @@ using System.Collections.Generic;
 
 namespace GitHubAPI_metrics {
     public class Program {
+        public static HttpClient client;
         public static void Main(string[] args) {
             Console.WriteLine("Enter access token key!");
             // string token = Console.ReadLine();
@@ -20,7 +21,7 @@ namespace GitHubAPI_metrics {
         }
         
 	    public static async Task ExecuteAsync(string token) {
-		    HttpClient client = new HttpClient();
+	        client = new HttpClient();
 		    client.BaseAddress = new Uri("https://api.github.com");
 		    client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "1.0"));
 		    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
