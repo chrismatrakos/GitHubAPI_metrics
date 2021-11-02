@@ -1,7 +1,4 @@
 .vs
 .vscode
-**/bin/**
-**/obj/**
-**/*/.gitignore
-**/.nuget/**
-/packages/**
+bin/**
+obj/**
