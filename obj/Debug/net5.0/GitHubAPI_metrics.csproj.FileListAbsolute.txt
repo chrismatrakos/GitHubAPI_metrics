@@ -63,3 +63,4 @@ C:\Users\testuser2\Documents\GitHubAPI_metrics\obj\Debug\net5.0\GitHubAPI_metric
 C:\Users\testuser2\Documents\GitHubAPI_metrics\obj\Debug\net5.0\ref\GitHubAPI_metrics.dll
 C:\Users\testuser2\Documents\GitHubAPI_metrics\obj\Debug\net5.0\GitHubAPI_metrics.pdb
 C:\Users\testuser2\Documents\GitHubAPI_metrics\obj\Debug\net5.0\GitHubAPI_metrics.genruntimeconfig.cache
+C:\Users\testuser2\Documents\GitHubAPI_metrics\obj\Debug\net5.0\GitHubAPI_metrics.csproj.CopyComplete

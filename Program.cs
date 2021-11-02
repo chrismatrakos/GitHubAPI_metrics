@@ -16,7 +16,7 @@ namespace GitHubAPI_metrics {
         public static void Main(string[] args) {
             Console.WriteLine("Enter access token key: ");
             string access_token = Console.ReadLine();
-            Console.WriteLine("Entered token: " + access_token);
+            Console.WriteLine("Entered token: {0}\n", access_token);
             Console.WriteLine("Making Github API Call...");
             Task.WaitAll(ExecuteAsync(access_token));
             Console.WriteLine("Press any key to exit...");
@@ -33,14 +33,14 @@ namespace GitHubAPI_metrics {
             // Console.WriteLine(response);
             
             if (response.IsSuccessStatusCode) {
-                Console.WriteLine("Github Api call succeded with response: " + response.StatusCode);
+                Console.WriteLine("Github Api call succeded with response: {0}\n", response.StatusCode);
                 var result  = response.Content.ReadAsStringAsync().Result;
                 // Console.WriteLine(result);                
                 Response response_object = JsonSerializer.Deserialize<Response>(result);
                 compute_api_points_threashold(response_object.rate.get_remaining_api_points());
             }
             else {
-                Console.WriteLine("Github Api call failed with response: " + response.StatusCode);
+                Console.WriteLine("Github Api call failed with response: {0}\n", response.StatusCode);
             }		    
 	    }
         
