@@ -3,7 +3,9 @@ using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
-using Newtonsoft.Json;
+using System.Collections.Generic;
+
+// using Newtonsoft.Json;
 
 namespace GitHubAPI_metrics {
     public class Program {
@@ -37,11 +39,9 @@ namespace GitHubAPI_metrics {
 				// Console.WriteLine("used: " + obj.rate.used);
                 // WORKING THE ABOVE......... 
                 
-                Rate obj = JsonConvert.DeserializeObject<Rate>(result);
-                Console.WriteLine(obj);
-				Console.WriteLine("limit: " + obj.limit);
-                Console.WriteLine("remaining: " + obj.remaining);
-				Console.WriteLine("used: " + obj.used);
+                Response obj = JsonSerializer.Deserialize<Response>(result);
+                Console.WriteLine("rate limit: " + obj.rate.limit);
+                Console.WriteLine("rate reset: " + obj.rate.reset);
                 // var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
                 // Console.WriteLine(s);
                 Console.WriteLine("SUCCESS");
@@ -60,12 +60,23 @@ namespace GitHubAPI_metrics {
 	    }
     }
 
-    class Rate {
+
+     public class Response
+    {
+        public Resources resources {get; set;}
+        public Property rate { get; set; }
+    }
+    public class Resources {
+        public Property core {get; set; }
+        public  Property graphql {get; set; }
+        public Property integration_manifest {get; set; }
+        public Property search {get; set; }
+    }
+    public class Property {
         public int limit { get; set; }
         public int used { get; set;}
         public int remaining { get; set; }
-        public string reset { get; set; }
-        public string core { get; set; }
-
+        public long reset { get; set; }
+        public string resource { get; set; }
     }
 }

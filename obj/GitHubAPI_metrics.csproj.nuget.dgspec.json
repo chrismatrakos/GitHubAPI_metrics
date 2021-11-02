@@ -38,6 +38,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Dictionary": {
+              "target": "Package",
+              "version": "[2.1.1, )"
+            },
             "JObject": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -45,6 +49,10 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.1, )"
+            },
+            "Nirvana.JsonSerializer": {
+              "target": "Package",
+              "version": "[2.1.154, )"
             }
           },
           "imports": [
