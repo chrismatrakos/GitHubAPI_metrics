@@ -1,23 +1,26 @@
-﻿using System;
+﻿using System.Runtime.InteropServices;
+using System.Net.Http.Headers;
+using System.Net;
+using System;
 using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
 using System.Collections.Generic;
 
-// using Newtonsoft.Json;
-
 namespace GitHubAPI_metrics {
+
     public class Program {
+
         public static HttpClient client;
 
         public static void Main(string[] args) {
-            Console.WriteLine("Enter access token key!");
-            // string token = Console.ReadLine();
-            var token = "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";
-            Console.WriteLine("User entered " + token);
-            Console.WriteLine("Making API Call...");
-            Task.WaitAll(ExecuteAsync(token));
+            Console.WriteLine("Enter access token key: ");
+            string access_token = Console.ReadLine();
+            Console.WriteLine("Entered token: " + access_token);
+            Console.WriteLine("Making Github API Call...");
+            Task.WaitAll(ExecuteAsync(access_token));
+            Console.WriteLine("Press any key to exit...");
             Console.ReadLine();
         }
         
@@ -28,38 +31,29 @@ namespace GitHubAPI_metrics {
 		    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
 		    // client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
 		    var response = await client.GetAsync("/rate_limit");
-		    Console.WriteLine("====================================================");
             Console.WriteLine(response);
             
             if (response.IsSuccessStatusCode) {
+                Console.WriteLine("Github Api call succeded with response: " + response.StatusCode);
                 var result  = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 Console.WriteLine(result);
-                // dynamic obj = JsonConvert.DeserializeObject<dynamic>(result);
-				// Console.WriteLine("limit: " + obj.rate.limit);
-                // Console.WriteLine("remaining: " + obj.rate.remaining);
-				// Console.WriteLine("used: " + obj.rate.used);
-                // WORKING THE ABOVE......... 
                 
-                Response obj = JsonSerializer.Deserialize<Response>(result);
-                Console.WriteLine("rate limit: " + obj.rate.limit);
-                Console.WriteLine("rate reset: " + obj.rate.reset);
-                // var s = Newtonsoft.Json.JsonConvert.DeserializeObject(result);
-                // Console.WriteLine(s);
-                Console.WriteLine("SUCCESS");
+                Response response_object = JsonSerializer.Deserialize<Response>(result);
+                Console.WriteLine("rate : " + response_object.rate.get_remaining_api_points());
+                compute_api_points_threashold(response_object.rate.get_remaining_api_points());
             }
             else {
-                Console.WriteLine("FAILED");
-                // return "Fail";
-            }
-            // response.EnsureSuccessStatusCode();
-    
-            // string data = await response.Content.ReadAsStringAsync();
-            // Console.WriteLine(JsonSerializer.Deserialize<User>(data));
-            // User user = JsonSerializer.Deserialize<User>(data);
-            // Console.WriteLine(user.Limit);
-		    
+                Console.WriteLine("Github Api call failed with response: " + response.StatusCode);
+            }		    
 	    }
+        
+        public static void compute_api_points_threashold(float api_points){
+            if(api_points < 0.1){
+                Console.WriteLine(0);
+            }else{
+                Console.WriteLine(1);
+            }
+        }
     }
 
 
@@ -80,5 +74,8 @@ namespace GitHubAPI_metrics {
         public int remaining { get; set; }
         public long reset { get; set; }
         public string resource { get; set; }
+        public float get_remaining_api_points(){
+            return (float)remaining / (float)limit;
+        }
     }
 }
