@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj": {}
+    "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj": {}
   },
   "projects": {
-    "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj": {
+    "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
+        "projectUniqueName": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
         "projectName": "GitHubAPI_metrics",
-        "projectPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
-        "packagesPath": "/home/user/.nuget/packages/",
-        "outputPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/",
+        "projectPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
+        "packagesPath": "C:\\Users\\testuser2\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/user/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\testuser2\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -38,10 +38,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "Dictionary": {
-              "target": "Package",
-              "version": "[2.1.1, )"
-            },
             "JObject": {
               "target": "Package",
               "version": "[1.0.0, )"
@@ -70,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

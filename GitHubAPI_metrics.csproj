@@ -7,6 +7,5 @@
     <PackageReference Include="JObject" Version="1.0.0"/>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1"/>
     <PackageReference Include="Nirvana.JsonSerializer" Version="2.1.154"/>
-    <PackageReference Include="Dictionary" Version="2.1.1"/>
   </ItemGroup>
 </Project>

@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     "net5.0": {
-      "Dictionary/2.1.1": {
-        "type": "package",
-        "compile": {
-          "lib/Dictionary.dll": {}
-        },
-        "runtime": {
-          "lib/Dictionary.dll": {}
-        }
-      },
       "JObject/1.0.0": {
         "type": "package",
         "dependencies": {
@@ -387,20 +378,6 @@
     }
   },
   "libraries": {
-    "Dictionary/2.1.1": {
-      "sha512": "ZeFETdMZiKji/hy5RrDVGK5Wn3aAHpXwYJvPEorkyTig+do4pueuf0o4VQDt3HyiBm5K3obDOFLhMaDfgDXpAg==",
-      "type": "package",
-      "path": "dictionary/2.1.1",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "dictionary.2.1.1.nupkg.sha512",
-        "dictionary.nuspec",
-        "lib/Dictionary.dll",
-        "lib/Dictionary.pdb",
-        "lib/Dictionary.xml"
-      ]
-    },
     "JObject/1.0.0": {
       "sha512": "Z16S56kCKISB54p22yFsB9HKLCTEEEfZGi1NC62sJ7SWDZptcgmO3n6AhiUnOlho6Y8KfKKuNUayG9pIfQ05Hg==",
       "type": "package",
@@ -1433,26 +1410,25 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Dictionary >= 2.1.1",
       "JObject >= 1.0.0",
       "Newtonsoft.Json >= 13.0.1",
       "Nirvana.JsonSerializer >= 2.1.154"
     ]
   },
   "packageFolders": {
-    "/home/user/.nuget/packages/": {}
+    "C:\\Users\\testuser2\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
+      "projectUniqueName": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
       "projectName": "GitHubAPI_metrics",
-      "projectPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
-      "packagesPath": "/home/user/.nuget/packages/",
-      "outputPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/",
+      "projectPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
+      "packagesPath": "C:\\Users\\testuser2\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/user/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\testuser2\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -1476,10 +1452,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "Dictionary": {
-            "target": "Package",
-            "version": "[2.1.1, )"
-          },
           "JObject": {
             "target": "Package",
             "version": "[1.0.0, )"
@@ -1508,20 +1480,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'Dictionary 2.1.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net5.0'. This package may not be fully compatible with your project.",
-      "libraryId": "Dictionary",
-      "targetGraphs": [
-        "net5.0"
-      ]
-    }
-  ]
+  }
 }

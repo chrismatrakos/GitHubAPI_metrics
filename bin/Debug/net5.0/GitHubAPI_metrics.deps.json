@@ -8,21 +8,12 @@
     ".NETCoreApp,Version=v5.0": {
       "GitHubAPI_metrics/1.0.0": {
         "dependencies": {
-          "Dictionary": "2.1.1",
           "JObject": "1.0.0",
           "Newtonsoft.Json": "13.0.1",
           "Nirvana.JsonSerializer": "2.1.154"
         },
         "runtime": {
           "GitHubAPI_metrics.dll": {}
-        }
-      },
-      "Dictionary/2.1.1": {
-        "runtime": {
-          "lib/Dictionary.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.0"
-          }
         }
       },
       "JObject/1.0.0": {
@@ -284,13 +275,6 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
-    },
-    "Dictionary/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ZeFETdMZiKji/hy5RrDVGK5Wn3aAHpXwYJvPEorkyTig+do4pueuf0o4VQDt3HyiBm5K3obDOFLhMaDfgDXpAg==",
-      "path": "dictionary/2.1.1",
-      "hashPath": "dictionary.2.1.1.nupkg.sha512"
     },
     "JObject/1.0.0": {
       "type": "package",
