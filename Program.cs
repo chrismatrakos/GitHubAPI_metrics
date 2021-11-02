@@ -13,6 +13,8 @@ namespace GitHubAPI_metrics {
     public class Program {
 
         public static HttpClient client;
+        public static string uri = "https://api.github.com";
+        public static string router = "/rate_limit";
 
         public static void Main(string[] args) {
             Console.WriteLine("Enter access token key: ");
@@ -26,20 +28,18 @@ namespace GitHubAPI_metrics {
         
 	    public static async Task ExecuteAsync(string token) {
 	        client = new HttpClient();
-		    client.BaseAddress = new Uri("https://api.github.com");
+		    client.BaseAddress = new Uri(uri);
 		    client.DefaultRequestHeaders.UserAgent.Add(new System.Net.Http.Headers.ProductInfoHeaderValue("AppName", "1.0"));
 		    client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
-		    // client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
-		    var response = await client.GetAsync("/rate_limit");
-            Console.WriteLine(response);
+		    client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Token", token);
+		    var response = await client.GetAsync(router);
+            // Console.WriteLine(response);
             
             if (response.IsSuccessStatusCode) {
                 Console.WriteLine("Github Api call succeded with response: " + response.StatusCode);
                 var result  = response.Content.ReadAsStringAsync().Result;
-                Console.WriteLine(result);
-                
+                // Console.WriteLine(result);                
                 Response response_object = JsonSerializer.Deserialize<Response>(result);
-                Console.WriteLine("rate : " + response_object.rate.get_remaining_api_points());
                 compute_api_points_threashold(response_object.rate.get_remaining_api_points());
             }
             else {
