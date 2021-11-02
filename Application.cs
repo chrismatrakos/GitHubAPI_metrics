@@ -16,7 +16,6 @@ namespace GitHubAPI_metrics {
             Console.WriteLine("Enter personal access token: ");
             string access_token = Console.ReadLine();
             Console.WriteLine("Entered token: {0}\n", access_token);
-            Console.WriteLine("Making Github API Call...");
             Task.WaitAll(ExecuteAsync(access_token));
         }
         
