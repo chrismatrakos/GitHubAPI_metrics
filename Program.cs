@@ -3,7 +3,6 @@ using System.IO;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Net.Http;
-using System.Collections.Generic;
 
 namespace GitHubAPI_metrics {
 
