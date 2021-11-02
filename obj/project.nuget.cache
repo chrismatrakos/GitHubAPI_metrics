@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "JehtBpJj2pLh4KziAp17wHx4S9txGVv3gLRcxrScbhy5I0T+ovqtiNO8F0iiwPZhki93TgBCBm2RtXMC7ox/sA==",
+  "dgSpecHash": "nFdIa03GiaiAFlPHx79ksYOrQEsUmf1c6JrcgiSNVSzB4DhTW1W1P8Zb+yK0zxZ4CiCP6pHKAAFDA6Q6I1GkUg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
+  "projectFilePath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\testuser2\\.nuget\\packages\\jobject\\1.0.0\\jobject.1.0.0.nupkg.sha512",
-    "C:\\Users\\testuser2\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+    "/home/user/.nuget/packages/jobject/1.0.0/jobject.1.0.0.nupkg.sha512",
+    "/home/user/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
   ],
   "logs": []
 }

@@ -73,19 +73,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\testuser2\\.nuget\\packages\\": {}
+    "/home/user/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
+      "projectUniqueName": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
       "projectName": "GitHubAPI_metrics",
-      "projectPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\GitHubAPI_metrics.csproj",
-      "packagesPath": "C:\\Users\\testuser2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\testuser2\\Documents\\GitHubAPI_metrics\\obj\\",
+      "projectPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/GitHubAPI_metrics.csproj",
+      "packagesPath": "/home/user/.nuget/packages/",
+      "outputPath": "/home/user/Desktop/3shape_project/GitHubAPI_metrics/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\testuser2\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/user/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -133,7 +133,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/5.0.402/RuntimeIdentifierGraph.json"
       }
     }
   }

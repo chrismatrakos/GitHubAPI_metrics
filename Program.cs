@@ -29,6 +29,7 @@ namespace GitHubAPI_metrics {
             
             if (response.IsSuccessStatusCode) {
                 var result  = response.Content.ReadAsStringAsync().Result;
+                Console.WriteLine(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
                 Console.WriteLine(result);
                 // dynamic obj = JsonConvert.DeserializeObject<dynamic>(result);
 				// Console.WriteLine("limit: " + obj.rate.limit);
