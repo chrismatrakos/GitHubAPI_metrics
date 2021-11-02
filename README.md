@@ -6,7 +6,7 @@ A simple dotnet application that given a PAT  of a user
 makes a GET request to https://api.github.com/rate_limit to determine the threashold of a user.  
 
 ### Prerequisites  
-.NET SDK and .NET runtime are installed on the machine.
+.NET SDK and .NET runtime are installed on the machine.  
 The .NET SDK includes both the .NET Runtime and the .NET CLI.    
 Verify by running  
 ```bash  
@@ -52,4 +52,4 @@ To publish the application and dependencies to be ready for deployment run
 dotnet publish -c Release
 ```
 This will create a dll in "bin\Debug\netVersion\"   
-and also will craete a publish folder in "bin\Debug\netVersion\publish" with an executable and dependencies.  
+and also will create a publish folder in "bin\Debug\netVersion\publish" with an executable and dependencies.  
