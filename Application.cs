@@ -32,18 +32,19 @@ namespace GitHubAPI_metrics {
                 var result  = response.Content.ReadAsStringAsync().Result;
                 // Console.WriteLine(result);                
                 Response response_object = JsonSerializer.Deserialize<Response>(result);
-                compute_api_points_threashold(response_object.rate.get_remaining_api_points());
+                int points_threashold = get_api_threashold(response_object.rate.get_remaining_api_points());
+                Console.WriteLine(points_threashold);
             }
             else {
                 Console.WriteLine("Github Api call failed with response: {0}\n", response.StatusCode);
             }		    
 	    }
         
-        public static void compute_api_points_threashold(float api_points){
+        public static int get_api_threashold(float api_points){
             if(api_points < 0.1){
-                Console.WriteLine(0);
+                return 0;
             }else{
-                Console.WriteLine(1);
+                return 1;
             }
         }
     }
