@@ -16,7 +16,7 @@ docker  --version
 
 Clone the repo loccally and at the app/ directory  where the Dockerfile is run the command:  
 ```bash
-docker build -t imageName -f Dockerfile .
+docker build -t image-name -f Dockerfile .
 ```  
 This will build the docker image with name: imageName.  
 
@@ -29,7 +29,7 @@ Output:
 
 Then after successfully build the image run the command:  
 ```bash
-docker run -it --rm imageName
+docker run -it --rm image-name
 ```  
 This will run the container and the applciation. 
 
