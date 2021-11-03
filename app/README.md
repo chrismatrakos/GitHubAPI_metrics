@@ -14,8 +14,7 @@ docker  --version
 ```  
 ### Build and Run docker image
 
-Clone the repo loccally and at the app/ directory  
-where the Dockerfile is and run the command:  
+Clone the repo loccally and at the app/ directory  where the Dockerfile is run the command:  
 ```bash
 docker build -t imageName -f Dockerfile .
 ```  
@@ -23,9 +22,10 @@ This will build the docker image with name: imageName.
 
 Run the command to list the docker images:
 ```bash
-docker image
+docker images
 ```  
- Output: `imageName latest 90e80f1b180f   15 minutes ago   186MB`  
+Output:  
+    `imageName latest 90e80f1b180f   15 minutes ago   186MB`  
 
 Then after successfully build the image run the command:  
 ```bash
