@@ -21,8 +21,11 @@ docker build -t imageName -f Dockerfile .
 ```  
 This will build the docker image with name: imageName.  
 
-Run `docker image` command to list the docker images.    
-`imageName latest 90e80f1b180f   15 minutes ago   186MB`  
+Run the command to list the docker images:
+```bash
+docker image
+```  
+ Output: `imageName latest 90e80f1b180f   15 minutes ago   186MB`  
 
 Then after successfully build the image run the command:  
 ```bash
