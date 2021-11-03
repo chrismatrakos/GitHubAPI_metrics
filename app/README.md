@@ -5,6 +5,30 @@
 A simple dotnet application that given a PAT  of a user  
 makes a GET request to https://api.github.com/rate_limit to determine the threashold of a user.  
 
+### Running only using Docker 
+### Prerequisites  
+Docker is installed in your machine  
+Verify by running  
+```bash  
+docker  --version
+```  
+### Build and Run docker image
+
+Clone the repo loccally and at the app/ directory  
+where the Dockerfile is and run the command:  
+```bash
+docker build -t imageName -f Dockerfile .
+```  
+This will build the docker image with name: imageName.  
+
+
+Then after successfully build the image run the command:  
+```bash
+docker run -it --rm imageName
+```  
+This will run the container and the applciation. 
+
+### Running without Docker 
 ### Prerequisites  
 .NET SDK and .NET runtime are installed on the machine.  
 The .NET SDK includes both the .NET Runtime and the .NET CLI.    
@@ -14,7 +38,7 @@ dotnet  --version
 ```  
 
 ### Setup and Run locally using dotnet   
-Clone the repo loccally and at the root directory  
+Clone the repo loccally and got to the app/ directory  
 start the dotnet console application running the command:  
 ```bash
 dotnet run  
@@ -30,7 +54,7 @@ Create the dotnet console application running the command:
 ```bash
 dotnet new console --framework net5.0  
 ```
-.NET framework might differ. I use net5.0.
+.NET framework might differ. I use net5.0.  
 
 To build the application run  
 ```bash
