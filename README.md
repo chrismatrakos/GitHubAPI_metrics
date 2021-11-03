@@ -18,14 +18,14 @@ Clone the repo loccally and at the app/ directory  where the Dockerfile is run t
 ```bash
 docker build -t image-name -f Dockerfile .
 ```  
-This will build the docker image with name: imageName.  
+This will build the docker image with name: image-name.  
 
 Run the command to list the docker images:
 ```bash
 docker images
 ```  
 Output:  
-    `imageName latest 90e80f1b180f   15 minutes ago   186MB`  
+    `image-name latest 90e80f1b180f   15 minutes ago   186MB`  
 
 Then after successfully build the image run the command:  
 ```bash
