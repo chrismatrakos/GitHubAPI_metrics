@@ -51,5 +51,4 @@ To publish the application and dependencies to be ready for deployment run
 ```bash
 dotnet publish -c Release
 ```
-This will create a dll in "bin\Debug\netVersion\"   
-and also will create a publish folder in "bin\Debug\netVersion\publish" with an executable and dependencies.  
+This will create a release folder in "bin\Debug\net5.0\release" with an executable and dependenciesready for deployment.  
